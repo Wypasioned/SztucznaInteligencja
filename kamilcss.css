@@ -1,0 +1,208 @@
+:root{
+  --color-bg: #bbb;
+  --color: #000;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color);
+  font-family: Helvetica, sans-serif;
+  justify-content: flex-start;
+}
+
+/*Guzik motywu ciemnego*/
+button{
+  background-color: #000;
+  border: solid 2px #bbb;
+  border-radius: 50px;
+  cursor: pointer;
+  height: 40px;
+  outline-width: 5px;
+  position: relative;
+  width: 70px;
+}
+
+.icon {
+  background-color: grey;
+  border-radius: 100%;
+  display: block;
+  content: "";
+  height: 25px;
+  position: relative;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 25px;
+}
+
+/*Dark Mode guzika*/
+body.dark{
+  --color-bg: #000;
+  --color: #fff;
+}
+
+body.dark .icon {
+  background: yellow;
+  transform: translateX(2em);
+}
+
+body.dark .icon::after {
+  background-color: #000;
+  content: "";
+  display: block;
+  height: 25px;
+  width: 19px;
+  border-radius: 100%;
+  position: absolute;
+  left: -5px;
+  top: 5px;
+}
+
+/*Strona o mnie*/
+h1{
+  font-size: 44pt;
+  text-align: center;
+}
+
+main {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  font-size: 24px;
+  padding: 12px 0;
+}
+
+.naglowek {
+  background-image: url("naglowek1.jpg");
+  min-height: 450px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 5%;
+}
+
+/*Zdjecie na stronie O mnie*/
+.kamil {
+  margin:0 auto;
+  display: block;
+  width: 20%;
+  margin-bottom: 3%;
+  border-radius: 16px;
+}
+
+/*Guzik do przejścia na góre*/
+.GoUp {
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid var(--color);
+  margin: 0 auto;
+}
+
+.guzik{
+  text-align: center;
+}
+
+.guzik p{
+  font-size: 12pt;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* GORNE MENU */
+
+.menu {
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #1F2232;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 2;
+}
+
+.MenuRight{
+  margin-right: 8rem;
+}
+
+.menu a{
+  color: white;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+}
+
+.rozwijane{
+  position: relative;
+}
+
+.rozwijane ul{
+  width: 200px;
+  text-align: center;
+  position: absolute;
+  background-color: #373C58;
+  padding: 0;
+  list-style-type: none;
+  box-shadow: 0px 0px 23px 0px rgba(0,0,0,0.25);
+  margin-top: 10px;
+  border-radius: 7px;
+  display: none;
+}
+
+.rozwijane ul li button{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  padding: 2px 10px;
+  margin: 0;
+  background-color: #373C58;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  font-size: 12pt;
+  border-radius: 7px;
+}
+
+.rozwijane ul li a{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 12pt;
+}
+
+.rozwijane ul li:hover{
+  background: #272B3F;
+  border-radius: 7px;
+}
+
+.rozwijane ul li button:hover{
+  background: #272B3F;
+  border-radius: 7px;
+}
+
+.rozwijane a:focus + ul, /* Po najechaniu tag ul dostanie display block */
+.rozwijane a:hover + ul,
+.rozwijane ul:hover{
+  display: block;
+}
+
+/*Strona Główna*/
+
+header h1{
+  font-size: 44pt;
+  text-align: center;
+  margin-top: 6%;
+}
+
+h2{
+  font-size: 23pt;
+}
